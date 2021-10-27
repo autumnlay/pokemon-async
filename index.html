@@ -20,17 +20,46 @@
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
-        <span class="ms-2">pokemon-async</span>
+        <span class="ms-2">Got to Catch them All!</span>
       </a>
     </nav>
   </header>
   <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+    <div class="container-fluid d-flex">
+      <div class="row flex-grow-1">
+        <div class="col-md-3 bg-success">
+          <h3>All Available Pokemon</h3>
+          <div class="m-2" id="allPokemon">
+            <i class="mdi mdi-loading mdi-spin"></i>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center py-5" id="activePokemon">
+          <div class="w-75 bg-white elevation-1 p-3 d-flex flex-column">
+            <div class="text-center">
+              <h3>POKEMON NAME</h3>
+              <img src="https://guardianlv.com/wp-content/uploads/2013/12/pokemon-logo.jpg" alt="">
+              <p><b>Height:</b> HIEGTH | <b>Weight:</b> WEIGHT | <b>Level:</b> LEVEL</p>
+              <p><b>Types:</b> TYPES</p>
+            </div>
+            <p><b>Abilities:</b> ABILITIES</p>
+            <div class="d-flex justify-content-between justify-self-end mt-auto">
+              <div>
+                <input type="checkbox" name="acivate" id="acivate">
+                <label for="acivate">Activate</label>
+              </div>
+              <button class="btn btn-success">catch</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 bg-success p-3">
+          <h3 class="henny-penny">Caught Pokemon</h3>
+          <div class="m-2" id="myPokemon"></div>
         </div>
       </div>
+
+
     </div>
   </main>
   <footer class="bg-dark text-light">
